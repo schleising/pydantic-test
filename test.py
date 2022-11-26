@@ -1,22 +1,10 @@
 import json
-from datetime import date
 from typing import Any
 
 from colorama import Fore
-from pydantic import BaseModel, ValidationError
+from pydantic import ValidationError
 
-
-class Address(BaseModel):
-    number: int
-    street: str
-    city: str
-
-class DateModel(BaseModel):
-    id: int
-    inputDate: date
-    name : str = 'Hello'
-    address: Address
-
+from model import DateModel
 
 def parse_data(entry: dict[str, Any]) -> bool:
     try:

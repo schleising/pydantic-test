@@ -1,0 +1,53 @@
+{
+  "title": "DateModel",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "integer"
+    },
+    "inputDate": {
+      "title": "Inputdate",
+      "type": "string",
+      "format": "date"
+    },
+    "name": {
+      "title": "Name",
+      "default": "Hello",
+      "type": "string"
+    },
+    "address": {
+      "$ref": "#/definitions/Address"
+    }
+  },
+  "required": [
+    "id",
+    "inputDate",
+    "address"
+  ],
+  "definitions": {
+    "Address": {
+      "title": "Address",
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "street": {
+          "title": "Street",
+          "type": "string"
+        },
+        "city": {
+          "title": "City",
+          "type": "string"
+        }
+      },
+      "required": [
+        "number",
+        "street",
+        "city"
+      ]
+    }
+  }
+}
