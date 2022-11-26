@@ -1,0 +1,60 @@
+[
+  {
+    "id": "12345",
+    "inputDate": "2022-11-10",
+    "name": "Name 1",
+    "address": {
+      "number": 210,
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  },
+  {
+    "id": "12346",
+    "inputDate": "2022-02-29",
+    "name": "Name 2",
+    "address": {
+      "number": 210,
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  },
+  {
+    "id": "12347",
+    "inputDate": "2024-02-29",
+    "name": "Name 3",
+    "address": {
+      "number": "210",
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  },
+  {
+    "id": "hello",
+    "inputDate": "2022-03-31",
+    "name": "Name 4",
+    "address": {
+      "number": 210,
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  },
+  {
+    "id": "12347",
+    "name": "Name 4",
+    "address": {
+      "number": 210,
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  },
+  {
+    "inputDate": "2022-04-21",
+    "name": 5,
+    "address": {
+      "number": "Invalid Number",
+      "street": "Long Street",
+      "city": "Odd City"
+    }
+  }
+]
