@@ -1,7 +1,7 @@
 import json
 from typing import Any
 
-from colorama import Fore
+from rich import print
 from pydantic import ValidationError
 
 from model import DateModel
@@ -12,16 +12,13 @@ def parse_data(entry: dict[str, Any]) -> bool:
         validatedData = DateModel(**entry)
     except ValidationError as e:
         # If there is a validation error, print it and return false
-        print(f'{Fore.RED}{e}')
+        print(f'[red]{e}[/]')
         return False
     else:
         # If the data validated OK, print it and the json representation and return True
-        print(f'{Fore.BLUE}{validatedData}')
-        print(f'{Fore.GREEN}{validatedData.json()}')
+        print(f'[blue]{validatedData}[/]')
+        print(f'[green]{validatedData.model_dump_json()}[/]')
         return True
-    finally:
-        # Either way reset the output colour
-        print(Fore.RESET)
 
 if __name__ == '__main__':
     print()
@@ -40,4 +37,4 @@ if __name__ == '__main__':
         print()
 
     # Output the schema
-    print(DateModel.schema_json(indent=2))
+    print(json.dumps(DateModel.model_json_schema(), indent=2))
